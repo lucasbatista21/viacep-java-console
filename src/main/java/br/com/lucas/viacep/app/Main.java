@@ -20,6 +20,7 @@ public class Main {
                 case 1:
                     System.out.println("DIGITE O CEP: ");
                     String cep = sc.nextLine();
+                    controller.searchCep(cep);
                     break;
 
                 case 2:
