@@ -1,6 +1,10 @@
 package br.com.lucas.viacep.controller;
 
+import br.com.lucas.viacep.service.CepService;
+
 public class CepController {
+    private final CepService service = new CepService();
+
     public void initialMenu() {
         System.out.printf("""
                     1 - BUSCAR CEP
@@ -20,7 +24,11 @@ public class CepController {
     }
 
     public void searchCep(String cep) {
-
+        if (!service.isValidCep(cep)) {
+            System.out.println("DIGITE UM CEP VÁLIDO!");
+        } else {
+            // Ainda falta configuramos a API para exibir as infos
+        }
     }
 
 }
