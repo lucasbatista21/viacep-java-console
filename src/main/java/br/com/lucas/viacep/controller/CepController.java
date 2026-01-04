@@ -52,7 +52,6 @@ public class CepController {
     }
 
     public void searchCep(String cep) {
-        CepService service = new CepService();
 
         try {
             Cep resultado = service.searchCepService(cep);
